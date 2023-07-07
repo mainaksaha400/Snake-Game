@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('Home page.jpg') no-repeat;
+    background-size: 100vw 100vh;
+}
+
+#start-game-container {
+    position: fixed;
+    top: 21.8%;
+    left: 11.2%;
+    height: 16vh;
+    width: 45vw;
+    border: none;
+    font-family: 'Kablammo', cursive;
+    font-size: 8vmin;
+    background-color: black;
+    color: crimson;
+    cursor: pointer;
+}
+
+#start-game-container:hover {
+    background-color: rgb(240, 240, 40);
+}

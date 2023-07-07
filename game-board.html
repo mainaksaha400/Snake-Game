@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake game</title>
+    <link rel="stylesheet" href="game-board-style.css" />
+    <script
+      src="https://kit.fontawesome.com/575de5e3b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <input
+      type="text"
+      id="dummy-input"
+      style="position: fixed; top: -9999px"
+      inputmode="none"
+      autocomplete="off"
+    />
+    <div id="score-board">
+      <div id="score-text">Score</div>
+      <div id="score-card"></div>
+    </div>
+    <div id="grid-container"></div>
+    <div id="button-container">
+      <div id="top-arrow">
+        <button id="top" class="button fa-solid fa-arrow-up"></button>
+      </div>
+      <div id="left-right-arrow">
+        <button id="left" class="button fa-solid fa-arrow-left"></button>
+        <button id="right" class="button fa-solid fa-arrow-right"></button>
+      </div>
+      <div id="down-arrow">
+        <button id="down" class="button fa-solid fa-arrow-down"></button>
+      </div>
+    </div>
+    <script src="game-script.js"></script>
+  </body>
+</html>

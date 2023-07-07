@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(82, 250, 82);
+}
+
+#score-board {
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: fixed;
+}
+
+#score-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Pacifico", cursive;
+  font-size: 3vw;
+}
+
+#score-card {
+  position: absolute;
+  left: 50%;
+  top: 7vmin;
+  transform: translateX(-50%);
+  font-family: "Caprasimo", cursive;
+  font-size: 6vw;
+}
+
+#grid-container {
+  background: linear-gradient(rgb(78, 78, 249), white);
+  position: fixed;
+  height: 95vh;
+  width: 80vw;
+  display: grid;
+  border: 0.6vmin solid black;
+}
+
+#button-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  right: 0;
+  bottom: 5vh;
+  width: 20vw;
+  height: 100vh;
+}
+
+#top-arrow {
+  position: absolute;
+  bottom: 16vw;
+  right: 6vw;
+}
+
+#left-right-arrow {
+  position: absolute;
+  bottom: 9vw;
+  right: 3vw;
+}
+
+#down-arrow {
+  position: absolute;
+  bottom: 2vw;
+  right: 6vw;
+}
+
+#top,
+#left,
+#right,
+#down {
+  height: 6vw;
+  width: 6vw;
+}
+
+.button {
+  font-size: 4vw;
+}
+.food {
+  background: crimson;
+  border-radius: 4vmin;
+}
+
+.snake-head {
+  background: linear-gradient(red, yellow);
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.snake-body {
+  background: black;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+@keyframes vibration {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.animation-effect {
+  animation: vibration 2s infinite alternate;
+}

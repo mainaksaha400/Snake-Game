@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Monomaniac+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap");
+
+body::before {
+  content: "";
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65vmin;
+  height: 100vmin;
+  background-image: url("snake-index-page-bg.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  font-family: "Kablammo", cursive;
+  font-size: 12vmin;
+  margin-top: 0.25vh;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-difficulty {
+  font-family: "Ysabeau SC", sans-serif;
+  font-weight: bold;
+  font-size: 10vmin;
+  margin-bottom: 3vmin;
+}
+
+.button-container {
+  display: flex;
+  column-gap: 8vmin;
+}
+
+.buttons {
+  background-color: rgb(247, 177, 0);
+  border-radius: 25vmin;
+  width: 22vmin;
+  height: 8vmin;
+  font-size: 4vmin;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  background-color: rgb(236, 104, 131);
+}

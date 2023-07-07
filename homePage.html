@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vmin;
+        height: 80vmin;
+        background-image: url("home-page-background-image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+        z-index: -1;
+      }
+      #start-game-button {
+        position: fixed;
+        width: 50vmin;
+        height: 10vmin;
+        font-family: "Kablammo", cursive;
+        font-size: 8vmin;
+        color: rgb(182, 0, 36);
+        cursor: pointer;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        border-radius: 4vmin;
+      }
+      #start-game-container:hover {
+        background-color: rgb(240, 240, 40);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="start-game-button-div">
+      <button id="start-game-button">START GAME</button>
+    </div>
+    <script>
+      const soundOnButtonHover = new Audio("button-hover-sound.mp3");
+      const backgroundMusic = new Audio("home-page-bg-music.mp3");
+      const buttonRef = document.getElementById("start-game-button");
+      buttonRef.addEventListener("mouseover", () => {
+        soundOnButtonHover.play();
+      });
+      buttonRef.addEventListener("click", () => {
+        window.location.replace("game-board.html");
+      });
+      window.addEventListener("load", () => {
+        backgroundMusic.play();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="index_style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <h1 class="heading">SNAKE GAME</h1>
+    <div class="container">
+      <div class="choose-difficulty">Select a level</div>
+      <div class="button-container">
+        <button class="buttons" id="noviceButton">Novice</button>
+        <button class="buttons" id="mastermindButton">Mastermind</button>
+      </div>
+    </div>
+    <script>
+      const soundOnButtonHover = new Audio("button-hover-sound.mp3");
+      const noviceButtonRef = document.getElementById("noviceButton");
+      const mastermindButtonRef = document.getElementById("mastermindButton");
+      noviceButtonRef.addEventListener("mouseover", () => {
+        soundOnButtonHover.play();
+      });
+      mastermindButtonRef.addEventListener("mouseover", () => {
+        soundOnButtonHover.play();
+      });
+      noviceButtonRef.addEventListener("click", () => {
+        localStorage.setItem("speedOfSnake", 2);
+        window.location.replace("homePage.html");
+      });
+      mastermindButtonRef.addEventListener("click", () => {
+        localStorage.setItem("speedOfSnake", 4);
+        window.location.replace("homePage.html");
+      });
+    </script>
+  </body>
+</html>
